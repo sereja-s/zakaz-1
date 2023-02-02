@@ -14,11 +14,14 @@ class IndexController extends BaseUser
 		// Выпуск №120
 		parent::inputData();
 
+
+		//=============================================================================================================//
+
 		// Выпуск №124- Пользовательская часть | вывод акций (слайдер под верхним меню)
-		$sales = $this->model->get('sales', [
+		/* $sales = $this->model->get('sales', [
 			'where' => ['visible' => 1],
 			'order' => ['menu_position']
-		]);
+		]); */
 
 		// Выпуск №128 - массив преимуществ
 		$advantages = $this->model->get('advantages', [
@@ -58,20 +61,7 @@ class IndexController extends BaseUser
 
 		];
 
-		$goods = [];
 
-		foreach ($arrHits as $type => $item) {
-
-			$goods[$type] = $this->model->getGoods([
-				'where' => [$type => 1, 'visible' => 1], // +Выпуск №127
-				'limit' => 7 // выводим не более 7 товаров у которых включены соответствующие предложения
-			]);
-		}
-
-		// Выпуск №125
-		//$goods = $this->model->getGoods();
-
-		// собираем переменные в массив и возвращаем в шаблон, что бы они стали доступными при выводе
-		return compact('sales', 'arrHits', 'goods', 'advantages', 'news');
+		return compact('arrHits', 'goods', 'advantages', 'news');
 	}
 }
