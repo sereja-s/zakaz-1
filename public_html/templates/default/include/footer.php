@@ -11,7 +11,7 @@
 			<div class="footer__social pinterest-ico"></div>
 		</div>
 		<div class="footer__yebo">
-			<span>Handcrafted by</span>
+			<span>проект Sait_postroen</span>
 			<img src="assets/img/bottom/Y_E_B_O_Logo.png" alt="">
 		</div>
 	</div>

@@ -24,11 +24,11 @@
 			<div class="header__nav-wrapper">
 				<nav class="header__nav">
 					<ul id="top-navigation">
-						<li><a class="header__link" href="#about">стройка</a></li>
-						<li><a class="header__link" href="#about">сварка</a></li>
+						<li><a class="header__link" href="#stroyka">стройка</a></li>
+						<li><a class="header__link" href="#svarka">сварка</a></li>
 						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/header_Logo.png" alt=""></a></li>
-						<li><a class="header__link" href="#work">сантехника</a></li>
-						<li><a class="header__link" href="#shop_now">электрика</a></li>
+						<li><a class="header__link" href="#santehnika">сантехника</a></li>
+						<li><a class="header__link" href="#elektrika">электрика</a></li>
 
 						<!-- <li><a class="header__link" href="#contact">Контактная информация</a></li> -->
 					</ul>
@@ -41,6 +41,6 @@
 					<div class="menu-icon__bottom" id="menu-icon__bottom"></div>
 				</div>
 			</div>
-			<div class="tagline"><a href="#contact" style="text-decoration: none; color:antiquewhite">контакты</a></div>
+			<div class="tagline"><a href="#contact" style="text-decoration: none; color: #FFFFFF">МАСТЕР ПО ВСЕМУ | контакты</a></div>
 		</header>
 		<div class="main-part">
