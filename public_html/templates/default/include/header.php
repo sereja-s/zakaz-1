@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -11,8 +11,10 @@
 	<!-- <link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css"> -->
-	<!-- <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon"> -->
+
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="robots" content="">
@@ -26,7 +28,7 @@
 					<ul id="top-navigation">
 						<li><a class="header__link" href="#stroyka">стройка</a></li>
 						<li><a class="header__link" href="#svarka">сварка</a></li>
-						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/header_Logo.png" alt=""></a></li>
+						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/logo-transparent.png" alt=""></a></li>
 						<li><a class="header__link" href="#santehnika">сантехника</a></li>
 						<li><a class="header__link" href="#elektrika">электрика</a></li>
 
