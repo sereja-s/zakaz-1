@@ -3,8 +3,8 @@
 //console.log(tinyMceDefaultAreas)
 
 /**
- * Метод инициализирует графический редактор текста в админке
- * На входе: 1- элемент, который приходит при отмечании чек-бокса 2- высота блока с графическим редактором текста
+ * Метод(функция) инициализирует графический редактор текста в админке
+ * На входе: 1- элемент, который приходит при отмечании чек-бокса 2- высота блока с графическим редактором текста (по умолчанию)
  */
 function MCEInit(element, height = 400) {
 
@@ -15,12 +15,12 @@ function MCEInit(element, height = 400) {
 		mode: 'exact', // режим работы редактора
 
 		// инициаизируем редактор
-		elements: element || tinyMceDefaultAreas,
+		elements: element || tinyMceDefaultAreas, // const tinyMceDefaultAreas объявлена в footer.php админки
 		height: height, // базовая высота редактора
 		gecko_spellcheck: true, // подключим браузерный словарь (покажет ошибки ввода)
 		relative_urls: false, // для корректного формирования ссылок
 
-		// укажем дополнительные возможности редактора текста
+		// укажем дополнительные возможности редактора текста в следующих 2-х свойствах:
 		plugins: [
 			"advlist autolink lists link image charmap print preview hr anchor pagebreak",
 			"searchreplace wordcount visualblocks visualchars code fullscreen",
@@ -50,10 +50,11 @@ function MCEInit(element, height = 400) {
 		imagetools_toolbar: 'editimage imageoptions',
 
 		/**
-		 * обработчик загрузки изображений (Выпуск №106)		 
+		 * свойство для обработки загрузки изображений (Выпуск №106-107) 		 
 		 */
 		images_upload_handler: function (file, success, fail) {
 
+			// создаём объект и сохраняем в переменной
 			let formdata = new FormData;
 
 			// добавляем в созданный объект: formdata необходиые данные
@@ -67,21 +68,21 @@ function MCEInit(element, height = 400) {
 			// добавим таблицу (чтобы корректно раскладывать данные по директориям)
 			formdata.append('table', document.querySelector('input[name="table"]').value);
 
-			// вызываем метод отправки данныз на сервер:
+			// вызываем наш метод: Ajax() отправки данных на сервер (на вход ему подаём описание объекта (его настройки)):
 			Ajax({
 				url: document.querySelector('#main-form').getAttribute('action'),
-				data: formdata,
+				data: formdata, // объект для отправки
 				contentType: false,
 				processData: false,
 				type: 'post'
 			}).then(res => {
-				console.log(res);
+				//console.log(res);
 				success(JSON.parse(res).location);
 			});
 		},
 
 		/**
-		 * свойство необходимое для появления и активации кнопки загрузки медиа 		  
+		 * свойство необходимое для появления и активации кнопки загрузки медиа (Выпуск №106) 		  
 		 */
 		file_picker_callback: function (callback, value, meta) {
 
@@ -98,6 +99,8 @@ function MCEInit(element, height = 400) {
 
 			// триггируем (подключим) событие
 			input.click();
+
+
 
 			// процесс добавления изображения в контентную часть:
 
@@ -116,7 +119,7 @@ function MCEInit(element, height = 400) {
 					blobCache.add(blobInfo);
 
 					// вызовем колбэк (покажет изображение)
-					// на вход 2- объект в котором установимс в-во: title
+					// на вход 1- для содержимого переменной: blobInfo вызываем метод: blobUri()  2- объект в котором установим св-во: title
 					callback(blobInfo.blobUri(), { title: this.files[0].name });
 				}
 			};
@@ -124,9 +127,10 @@ function MCEInit(element, height = 400) {
 	})
 }
 
+// вызовем функцию инициализирующую графический редактор текста в админке
 MCEInit();
 
-// иницализиируем кнопки, чтобы по кнопкам всё работало, а при необходимости редактор текста можно было отключать: 
+// иницализиируем кнопки, чтобы по кнопкам всё работало, а при необходимости редактор текста можно было отключать (Выпуск №106): 
 
 // выбираем все input (c type="checkbox") с классом: tineMceInit
 let mceElements = document.querySelectorAll('input.tinyMceInit');

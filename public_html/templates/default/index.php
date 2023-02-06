@@ -112,7 +112,7 @@
 	</div>
 </section>
 
-<section class="shop" id="shop_now">
+<!-- <section class="shop" id="shop_now">
 	<div class="shop__row">
 		<div class="shop__part-1">
 			<div class="shop__part-1-top">
@@ -162,7 +162,7 @@
 	<div class="shop__button-container">
 		<button class="shop__button"><a href="#otzyvy">Читать отзывы</a></button>
 	</div>
-</section>
+</section> -->
 
 <!-- <section class="email">
 	<a href=""><img src="assets/img/header/header_Logo.png" alt=""></a>

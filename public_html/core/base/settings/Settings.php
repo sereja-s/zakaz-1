@@ -72,28 +72,25 @@ class Settings
 	private $messages = 'core/base/messages/';
 
 	// свойство с таблицей по умолчанию
-	private $defaultTable = 'sales';
+	private $defaultTable = 'users';
 
 	// свойство в котором хранится путь к шаблонам админки
 	private $formTemplates = PATH . 'core/admin/view/include/form_templates/';
 
 	// свойство с таблицами, названия которых будут показаны в боковом меню админки
 	private $projectTables = [
-		'sales' => ['name' => 'Акции'],
-		'catalog' => ['name' => 'Каталог (меню)'],
-		'filters' => ['name' => 'Фильтры'],
-		'goods' => ['name' => 'Товары'],
+
 		'news' => ['name' => 'Новости'],
 		'information' => ['name' => 'Информация (меню)'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
 		'advantages' => ['name' => 'Преимущества'],
 		'socials' => ['name' => 'Соц.сети'],
 		'users' => ['name' => 'Пользователи'],
-		'teachers' => ['name' => 'Учителя', 'img' => 'page-new.png']
 	];
 
 	// свойство: массив шаблонов
 	private $templateArr = [
+
 		// массив вида: 'название шаблона' => массив с полями для которых должен быть подключен соответствующий шаблон
 		'text' => ['name', 'phone', 'email', 'alias', 'external_alias', 'sub_title', 'number_of_years', 'discount', 'price', 'login', 'password'],
 		'textarea' => ['content', 'keywords', 'address', 'description', 'short_content'],
@@ -144,12 +141,9 @@ class Settings
 
 	// св-во, в котором будут храниться значения для input type radio (кнопок переключателей (да, нет и т.д.))
 	private $radio = [
+
 		'visible' => ['НЕТ', 'ДА', 'default' => 'ДА'],
 		'show_top_menu' => ['НЕТ', 'ДА', 'default' => 'ДА'],
-		'hit' => ['НЕТ', 'ДА', 'default' => 'НЕТ'],
-		'sale' => ['НЕТ', 'ДА', 'default' => 'НЕТ'],
-		'new' => ['НЕТ', 'ДА', 'default' => 'НЕТ'],
-		'hot' => ['НЕТ', 'ДА', 'default' => 'НЕТ'],
 	];
 
 	// св-во, в котором будет храниться информация о корневых таблицах

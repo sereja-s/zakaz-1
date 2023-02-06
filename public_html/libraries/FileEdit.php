@@ -74,6 +74,7 @@ class FileEdit
 
 					if ($res_name) {
 
+						// Выпуск №107
 						$this->imgArr[$key] = $directory . $res_name;
 					}
 				}

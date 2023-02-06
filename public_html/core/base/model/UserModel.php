@@ -98,9 +98,9 @@ class UserModel extends BaseModel
 			// добавим запись в таблицу БД (из $userTable) для авторизации админа (по умолчанию)
 			$this->add($this->userTable, [
 				'fields' => [
-					'name' => 'admin',
-					'login' => 'adminStroitSait(ы)',
-					'password' => md5(123123123)
+					'name' => 'Александр',
+					'login' => 'Alex',
+					'password' => md5(949494)
 				]
 			]);
 		}

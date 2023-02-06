@@ -28,7 +28,7 @@
 					<ul id="top-navigation">
 						<li><a class="header__link" href="#stroyka">стройка</a></li>
 						<li><a class="header__link" href="#svarka">сварка</a></li>
-						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/logo-transparent.png" alt=""></a></li>
+						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/logo-3.png" alt=""></a></li>
 						<li><a class="header__link" href="#santehnika">сантехника</a></li>
 						<li><a class="header__link" href="#elektrika">электрика</a></li>
 

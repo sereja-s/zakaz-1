@@ -26,11 +26,6 @@ abstract class BaseUser extends \core\base\controller\BaseController
 	protected $menu;
 
 	/** 
-	 * Выпуск №129 (св-во для хлебных крошек)
-	 */
-	protected $breadcrumbs;
-
-	/** 
 	 * св-во в котором будем держать данные пользователя (Выпуск №145)
 	 */
 	protected $userData = [];
@@ -43,7 +38,7 @@ abstract class BaseUser extends \core\base\controller\BaseController
 
 	protected function inputData()
 	{
-		// инициализируем стили и скрипты На вход здесь ничего не передаём
+		// инициализируем стили и скрипты На вход здесь ничего не передаём (Выпуск №120)
 		$this->init();
 
 		// получим модель (если ещё не получена)
@@ -59,14 +54,6 @@ abstract class BaseUser extends \core\base\controller\BaseController
 
 		// укажежем, что если что то пришло в свойство: $this->set, то сохраним в нём только нулевой элемент массива, который пришёл (первый по очереди)
 		$this->set && $this->set = $this->set[0];
-
-
-
-		// получим в св-во: $this->menu, в ячейку: ['catalog'], то что хранится в соответствующей таблице БД
-		/* $this->menu['catalog'] = $this->model->get('catalog', [
-			'where' => ['visible' => 1, 'parent_id' => null],
-			'order' => ['menu_position']
-		]); */
 
 		// получим в св-во: $this->menu, в ячейку: ['information'], то что хранится в соответствующей таблице БД
 		$this->menu['information'] = $this->model->get('information', [
@@ -89,12 +76,8 @@ abstract class BaseUser extends \core\base\controller\BaseController
 		$args = func_get_arg(0);
 		$vars = $args ? $args : [];
 
-		// +Выпуск №129 (добавили в шаблон путь к файлу с хлебными крошками)
-		$this->breadcrumbs = $this->render(TEMPLATE . 'include/breadcrumbs');
 
 		if (!$this->content) {
-
-			//if(!$this->template) { $this->template = ADMIN_TEMPLATE . 'show'; }
 
 			$this->content = $this->render($this->template, $vars);
 		}

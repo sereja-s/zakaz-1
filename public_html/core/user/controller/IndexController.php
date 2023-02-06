@@ -17,11 +17,7 @@ class IndexController extends BaseUser
 
 		//=============================================================================================================//
 
-		// Выпуск №124- Пользовательская часть | вывод акций (слайдер под верхним меню)
-		/* $sales = $this->model->get('sales', [
-			'where' => ['visible' => 1],
-			'order' => ['menu_position']
-		]); */
+
 
 		// Выпуск №128 - массив преимуществ
 		$advantages = $this->model->get('advantages', [
@@ -38,30 +34,6 @@ class IndexController extends BaseUser
 			'limit' => 3
 		]);
 
-		// Выпуск №126
-		// массив предложений (главная страница) +Выпуск №127
-		$arrHits = [
-
-			'hit' => [
-				'name' => 'Хиты продаж',
-				'icon' => '<svg><use xlink:href="' . PATH . TEMPLATE . 'assets/img/icons.svg#hit"</use></svg>'
-			],
-			'hot' => [
-				'name' => 'Горячие предложения',
-				'icon' => '<svg><use xlink:href="' . PATH . TEMPLATE . 'assets/img/icons.svg#hot"</use></svg>'
-			],
-			'sale' => [
-				'name' => 'Распродажа',
-				'icon' => '%'
-			],
-			'new' => [
-				'name' => 'Новинки',
-				'icon' => 'н'
-			],
-
-		];
-
-
-		return compact('arrHits', 'goods', 'advantages', 'news');
+		return compact('advantages', 'news');
 	}
 }

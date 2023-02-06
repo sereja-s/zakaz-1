@@ -11,8 +11,6 @@ class AjaxController extends BaseAdmin
 {
 	public function ajax()
 	{
-		//return 'ADMIN AJAX';
-
 		// Выпуск №69 (+Выпуск №96)
 		if (isset($this->ajaxData['ajax'])) {
 
@@ -50,7 +48,6 @@ class AjaxController extends BaseAdmin
 
 					// Выпуск №107- осуществим загрузку файлов на сервер, добавляемых через визуальный редактор TinyMce 5
 				case 'wyswyg_file':
-					$a = 1;
 					$fileEdit = new FileEdit();
 					$fileEdit->setUniqueFile(false);
 					$file = $fileEdit->addFile($this->clearStr($this->ajaxData['table']) . '/content_file/');

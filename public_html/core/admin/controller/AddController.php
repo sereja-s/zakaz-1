@@ -43,37 +43,5 @@ class AddController extends BaseAdmin
 
 		// вызываем метод, который будет расширять функционал нашего фреймвёрка (работа с расширениями)
 		return $this->expansion();
-
-		/* $this->data = [
-			'name' => 'Masha',
-			'keywords' => 'Ключевая',
-			'img' => '1.png',
-			'gallery_img' => json_encode(['1.jpg', '2.png'])
-		]; */
-		//$this->manyAdd();
-		//exit;
-
 	}
-
-	/* protected function manyAdd()
-	{
-
-		$fields = [
-
-			'name' => 'Zina', 'menu_position' => 11
-			//1 => ['name' => 'Marina', 'img' => '7.jpg', 'menu_position' => 1],
-			//2 => ['name' => 'Tania', 'img' => '8.jpg'],
-		];
-
-		$files = [
-			//'img' => '9.jpg',
-			'gallery_img' => ['15.jpg', '16.jpg']
-		];
-
-		$this->model->add('teachers', [
-
-			'fields' => $fields,
-			'files' => $files
-		]);
-	} */
 }
