@@ -80,11 +80,11 @@ class Settings
 	// свойство с таблицами, названия которых будут показаны в боковом меню админки
 	private $projectTables = [
 
-		'news' => ['name' => 'Новости'],
-		'information' => ['name' => 'Информация (меню)'],
+		'information' => ['name' => 'Информация'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
 		'advantages' => ['name' => 'Преимущества'],
 		'socials' => ['name' => 'Соц.сети'],
+		'news' => ['name' => 'Новости'],
 		'users' => ['name' => 'Пользователи'],
 	];
 
@@ -92,13 +92,13 @@ class Settings
 	private $templateArr = [
 
 		// массив вида: 'название шаблона' => массив с полями для которых должен быть подключен соответствующий шаблон
-		'text' => ['name', 'phone', 'email', 'alias', 'external_alias', 'sub_title', 'number_of_years', 'discount', 'price', 'login', 'password'],
-		'textarea' => ['content', 'keywords', 'address', 'description', 'short_content'],
+		'text' => ['name', 'phone', 'email', 'alias', 'menu_id', 'external_alias', 'sub_title', 'number_of_years', 'discount', 'price', 'login', 'password'],
+		'textarea' => ['content', 'keywords', 'address', 'address_big', 'description', 'short_content'],
 		'radio' => ['visible', 'show_top_menu', 'hit', 'sale', 'new', 'hot'],
 		'checkboxlist' => ['filters', 'filters_test'], // указали, что хотим подключить фильтры к связанной таблице: 
 		// товары (они прописаны в массиве: в свойстве: private $manyToMany)
 		'select' => ['menu_position', 'parent_id'],
-		'img' => ['img', 'main_img', 'img_years', 'promo_img'],
+		'img' => ['img', 'main_img', 'img_horizontal', 'img_vertical', 'promo_img'],
 		'gallery_img' => ['gallery_img', 'new_gallery_img']
 	];
 
@@ -115,9 +115,13 @@ class Settings
 		'phone' => ['Телефон'],
 		'email' => ['Электронная почта'],
 		'address' => ['Адрес'],
+		'address_big' => ['детали адреса'],
 		'alias' => ['Ссылка ЧПУ'],
+		'menu_id' => ['Идетификатор'],
 		'external_alias' => ['Внешняя ссылка'],
 		'img' => ['Изображение', '(Одно)'],
+		'img_horizontal' => ['Изображение горизонтальное', '(Одно)'],
+		'img_vertical' => ['Изображение вертикальное', '(Одно)'],
 		'gallery_img' => ['галерея изображений', '(Несколько)'],
 		'visible' => ['Видимость', '(Показывать?)'],
 		'menu_position' => ['Позиция в списке', '(Расположение в меню)'],
@@ -164,7 +168,7 @@ class Settings
 	// (по умолчанию содержимое разделов адмики занимает левый блок: vg-rows) 
 	private $blockNeedle = [
 		'vg-rows' => [],
-		'vg-img' => ['img', 'main_img', 'gallery_img', 'img_years', 'number_of_years', 'promo_img'],
+		'vg-img' => ['img', 'main_img', 'gallery_img', 'img_horizontal', 'img_vertical', 'promo_img'],
 		'vg-content' => ['content']
 	];
 

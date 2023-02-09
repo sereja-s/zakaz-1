@@ -1,18 +1,19 @@
 <footer class="footer" id="contact">
 	<div class="footer__row">
 		<div class="footer__adress">
-			<div>AOD New York</div>
-			<div>2250 Lexington Avenue</div>
-			<div>New York, NY 10035 - <a href="mailto:info@domain.com">info@domain.com</a></div>
+			<div><?= $this->set['address'] ?></div>
+			<div><?= $this->set['address_big'] ?></div>
+			<div><a href="tel:<?= preg_replace('/[^+\d]/', '', $this->set['phone']) ?>"><?= $this->set['phone'] ?></a></div><br>
+			<div><a href="mailto:<?= $this->set['email'] ?>"><?= $this->set['email'] ?></a></div>
 		</div>
 		<div class="footer__social-wrapper">
-			<div class="footer__social twitter-ico"></div>
-			<div class="footer__social facebook-ico"></div>
-			<div class="footer__social pinterest-ico"></div>
+			<div class="footer__social twitter-ico" style='background: url("<?= PATH . TEMPLATE ?>assets/img/bottom/twitter.svg") center center/contain no-repeat;'></div>
+			<div class="footer__social facebook-ico" style='background: url("<?= PATH . TEMPLATE ?>assets/img/bottom/facebook.svg") center center/contain no-repeat;'></div>
+			<div class="footer__social pinterest-ico" style='background: url("<?= PATH . TEMPLATE ?>assets/img/bottom/pinterest.svg") center center/contain no-repeat;'></div>
 		</div>
 		<div class="footer__yebo">
 			<span>проект Sait_postroen</span>
-			<img src="assets/img/bottom/Y_E_B_O_Logo.png" alt="">
+			<img src="<?= PATH . TEMPLATE ?>assets/img/bottom/Y_E_B_O_Logo.png" alt="">
 		</div>
 	</div>
 </footer>

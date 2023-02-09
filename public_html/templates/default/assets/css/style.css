@@ -164,7 +164,7 @@ body {
 }
 
 .header {
-  background: url("../img/header/header_bg.png") center top/cover no-repeat fixed;
+  /* background: url("../img/header/header_bg.png") center top/cover no-repeat fixed; */
   background-color: #d1d1d1;
   min-height: 100%;
 }
@@ -421,11 +421,13 @@ body {
   }
 }
 
+/* =================================================================================================================*/
+
 .generation {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 25px;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color:#ffffff;
 }
 
 .generation__logo {
@@ -538,8 +540,8 @@ body {
 }
 
 .vintage__text-part-img {
-  background: url("../img/content/img_2.png") center top no-repeat;
-  background-size: cover;
+  /* background: url("../img/content/img_2.png") center top no-repeat; */
+  /* background-size: cover; */
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -566,7 +568,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../img/content/img_1.png") center top/cover no-repeat;
+  /* background: url("../img/content/img_1.png") center top/cover no-repeat; */
   height: 750px;
 }
 
@@ -611,6 +613,8 @@ body {
     font-size: 16px;
   }
 }
+
+/* ============================================================================================================== */
 
 .boriosa__row {
   display: -webkit-box;
@@ -693,8 +697,8 @@ body {
 }
 
 .boriosa__text-part-img {
-  background: url("../img/content/img_3.png") center top no-repeat;
-  background-size: cover;
+  /* background: url("../img/content/img_3.png") center top no-repeat; */
+  /* background-size: cover; */
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -712,7 +716,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
-  background: url("../img/content/img_4.png") center top/cover no-repeat;
+  /* background: url("../img/content/img_4.png") center top/cover no-repeat; */
   height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,8 +853,8 @@ body {
 }
 
 .retro__text-part-img {
-  background: url("../img/content/img_6.png") center top no-repeat;
-  background-size: cover;
+  /* background: url("../img/content/img_6.png") center top no-repeat; */
+  /* background-size: cover; */
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -868,7 +872,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
-  background: url("../img/content/img_5.png") center top/cover no-repeat;
+  /* background: url("../img/content/img_5.png") center top/cover no-repeat; */
   height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,7 +895,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
-  background: url("../img/content/img_7.png") center top/cover no-repeat;
+  /* background: url("../img/content/img_7.png") center top/cover no-repeat; */
   height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1090,7 +1094,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  background: url("../img/bottom/shop1-2.png") center center/cover no-repeat;
+  /* background: url("../img/bottom/shop1-2.png") center center/cover no-repeat; */
   width: 17vw;
   height: 267px;
 }
@@ -1127,7 +1131,7 @@ body {
           flex: 1 1 auto;
   width: 16.8vw;
   height: 267px;
-  background: url("../img/bottom/shop1-1.png") left center/cover no-repeat;
+  /* background: url("../img/bottom/shop1-1.png") left center/cover no-repeat; */
 }
 
 @media (max-width: 751px) {
@@ -1164,7 +1168,7 @@ body {
 .shop__part-1-bottom .overflow-container .img-container {
   width: 34vw;
   height: 267px;
-  background: url("../img/bottom/shop1-3.png") left top/cover no-repeat;
+  /* background: url("../img/bottom/shop1-3.png") left top/cover no-repeat; */
 }
 
 @media (max-width: 751px) {
@@ -1205,7 +1209,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
-  background: url("../img/bottom/shop2-2.png") center center/cover no-repeat;
+  /* background: url("../img/bottom/shop2-2.png") center center/cover no-repeat; */
   width: 16.5vw;
   height: 534px;
 }
@@ -1241,7 +1245,7 @@ body {
           flex: 1 1 50%;
   width: 16.5vw;
   height: 534px;
-  background: url("../img/bottom/shop2-1.png") center center/cover no-repeat;
+ /*  background: url("../img/bottom/shop2-1.png") center center/cover no-repeat; */
 }
 
 @media (max-width: 751px) {
@@ -1300,7 +1304,7 @@ body {
 .shop__part-3-top .overflow-container:first-child .img-container {
   width: 33vw;
   height: 267px;
-  background: url("../img/bottom/shop3-1.png") center center/cover no-repeat;
+  /* background: url("../img/bottom/shop3-1.png") center center/cover no-repeat; */
   opacity: 0.3;
 }
 
@@ -1379,7 +1383,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  background: url("../img/bottom/shop3-2.png") center center/cover no-repeat;
+  /* background: url("../img/bottom/shop3-2.png") center center/cover no-repeat; */
   width: 16.3vw;
   height: 267px;
 }
@@ -1415,7 +1419,7 @@ body {
           flex: 1 1 auto;
   width: 16.7vw;
   height: 267px;
-  background: url("../img/bottom/shop3-3.png") center center/cover no-repeat;
+  /* background: url("../img/bottom/shop3-3.png") center center/cover no-repeat; */
 }
 
 @media (max-width: 751px) {
@@ -1742,15 +1746,15 @@ body {
 }
 
 .footer__social.twitter-ico {
-  background: url("../img/bottom/twitter.svg") center center/contain no-repeat;
+  /* background: url("../img/bottom/twitter.svg") center center/contain no-repeat; */
 }
 
 .footer__social.facebook-ico {
-  background: url("../img/bottom/facebook.svg") center center/contain no-repeat;
+  /* background: url("../img/bottom/facebook.svg") center center/contain no-repeat; */
 }
 
 .footer__social.pinterest-ico {
-  background: url("../img/bottom/pinterest.svg") center center/contain no-repeat;
+  /* background: url("../img/bottom/pinterest.svg") center center/contain no-repeat; */
   margin-right: 0;
 }
 

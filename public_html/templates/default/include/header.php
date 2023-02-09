@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Мастер по всему</title>
+	<title><?= $this->set['name'] ?></title>
 
 	<?php $this->getStyles() ?>
 
@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css"> -->
 
-	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?= PATH . TEMPLATE ?>assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?= PATH . TEMPLATE ?>assets/img/favicon.ico" type="image/x-icon">
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -22,13 +22,13 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" style='background: url("<?= PATH . TEMPLATE ?>assets/img/header/header_bg.png") center top/cover no-repeat fixed;'>
 			<div class="header__nav-wrapper">
 				<nav class="header__nav">
 					<ul id="top-navigation">
 						<li><a class="header__link" href="#stroyka">стройка</a></li>
 						<li><a class="header__link" href="#svarka">сварка</a></li>
-						<li><a href=""><img class="header__logo" id="header__logo" src="/templates/default/assets/img/header/logo-3.png" alt=""></a></li>
+						<li><a href="<?= $this->alias() ?>"><img class="header__logo" id="header__logo" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></a></li>
 						<li><a class="header__link" href="#santehnika">сантехника</a></li>
 						<li><a class="header__link" href="#elektrika">электрика</a></li>
 
@@ -43,6 +43,6 @@
 					<div class="menu-icon__bottom" id="menu-icon__bottom"></div>
 				</div>
 			</div>
-			<div class="tagline"><a href="#contact" style="text-decoration: none; color: #FFFFFF">МАСТЕР ПО ВСЕМУ | контакты</a></div>
+			<div class="tagline"><a href="#contact" style="text-decoration: none; color: #FFFFFF"><?= $this->set['name'] ?> | контакты</a></div>
 		</header>
 		<div class="main-part">
