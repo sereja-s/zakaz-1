@@ -983,6 +983,10 @@ body {
   padding-bottom: 15px;
 }
 
+.slider__content p {
+	font-size: 18px;
+}
+
 @media (max-width: 750px) {
   .twitter .slider__caption {
     padding-left: 7.5vw;
@@ -999,7 +1003,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: #848789;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -1735,17 +1739,21 @@ body {
   }
 }
 
-.footer__social {
-  width: 48px;
-  height: 48px;
-  margin-right: 20px;
+.footer__social a img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
 }
 
-.footer__social:hover {
+/* .footer__social a img:last-child {
+	margin-right: 0;
+} */
+
+.footer__social a img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
@@ -1762,7 +1770,7 @@ body {
 
 .footer__social.pinterest-ico {
   /* background: url("../img/bottom/pinterest.svg") center center/contain no-repeat; */
-  margin-right: 0;
+ /*  margin-right: 0; */
 }
 
 .footer__yebo {

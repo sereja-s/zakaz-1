@@ -5,7 +5,7 @@
 	<div class="generation__title title" style="font-family: Arial, sans-serif;"><?= $this->info['name'] ?></div>
 	<div class="generation__text"><?= $this->info['content'] ?></div>
 	<div class="img" style="text-align:center">
-		<img src=" <?= $this->img($this->info['img']) ?>" alt="">
+		<img src="<?= $this->img($this->info['img']) ?>" alt="">
 	</div>
 </section>
 
@@ -170,94 +170,79 @@
 
 <?php endif; ?>
 
-<section class="twitter" id="otzyvy">
-	<div class="twitter__logo"><img src="<?= PATH . TEMPLATE ?>assets/img/bottom/Icon-tw.png" alt=""></div>
-	<div class="twitter__slider slider">
-		<div class="owl-carousel owl-theme" id="slider">
-			<div class="slider__content">
-				<h2 class="slider__caption">Bike Commuting MA <span>@driversofnyc</span></h2>
-				<p class="slider__text">Did Boston take all of NYC's? They were averaging like 10-20ft between
-					barrels</p>
-			</div>
-			<div class="slider__content">
-				<h2 class="slider__caption">Jesse Huffman <span>@thattoasterbox</span></h2>
-				<p class="slider__text">I read these comments and think, yes, a 20 pound bicycle going 5 miles an
-					hour should definitely be allowed in the middle of the road as 3000 pound cars go by at 30 miles
-					an hour, just use the damn bike lane or get over as far as you can without putting yourself at
-					harms way</p>
-			</div>
-			<div class="slider__content">
-				<h2 class="slider__caption">CyclingMikey aka Bike Gandalf <span>@MikeyCycling</span></h2>
-				<p class="slider__text">I was quite heavily loaded yesterday. Got some amused bike on bike comments
-					at traffic lights too.</p>
-			</div>
-			<div class="slider__content">
-				<h2 class="slider__caption">Jesse Huffman <span>@thattoasterbox</span></h2>
-				<p class="slider__text">I read these comments and think, yes, a 20 pound bicycle going 5 miles an
-					hour should definitely be allowed in the middle of the road as 3000 pound cars go by at 30 miles
-					an hour, just use the damn bike lane or get over as far as you can without putting yourself at
-					harms way</p>
-			</div>
-			<div class="slider__content">
-				<h2 class="slider__caption">CyclingMikey aka Bike Gandalf <span>@MikeyCycling</span></h2>
-				<p class="slider__text">I was quite heavily loaded yesterday. Got some amused bike on bike comments
-					at traffic lights too.</p>
-			</div>
-		</div>
-	</div>
-</section>
+<?php if (!empty($comments)) : ?>
 
-<!-- <section class="shop" id="shop_now">
-	<div class="shop__row">
-		<div class="shop__part-1">
-			<div class="shop__part-1-top">
-				<div class="overflow-container">
-					<div class="img-container"></div>
-				</div>
-				<div class="overflow-container">
-					<div class="img-container"></div>
-				</div>
-			</div>
-			<div class="shop__part-1-bottom">
-				<div class="overflow-container">
-					<div class="img-container"></div>
-				</div>
-			</div>
-		</div>
-		<div class="shop__part-2">
-			<div class="overflow-container">
-				<div class="overflow-container"></div>
-				<div class="img-container"></div>
-			</div>
-			<div class="overflow-container">
-				<div class="img-container"></div>
-			</div>
-		</div>
-		<div class="shop__part3">
-			<div class="shop__part-3-top"><a href="#shop_now">
-					<div class="overflow-container">
-						<div class="img-container"></div>
-					</div>
-					<div class="shop-now">
-						<img class="shop__ico" src="assets/img/bottom/Shape_13.png" alt="">
-						<div class="shop__title">Shop now</div>
-					</div>
-			</div></a>
-			<div class="shop__part-3-bottom">
-				<div class="overflow-container">
-					<div class="img-container"></div>
-				</div>
-				<div class="overflow-container">
-					<div class="img-container"></div>
-				</div>
-			</div>
+	<section class="twitter" id="otzyvy" style="padding-left: 7.5vw; padding-right: 7.5vw;">
+		<div class="twitter__logo"><img src="<?= $this->img($this->info['img_comments']) ?>" alt=""></div>
+		<div class="twitter__slider slider">
+			<div class="owl-carousel owl-theme" id="slider">
 
+				<?php foreach ($comments as $item) : ?>
+
+					<div class="slider__content">
+						<h2 class="slider__caption"><?= $item['name_comment'] ?> <span><?= $item['number_of_years'] ?></span></h2>
+						<p class="slider__text"><?= $item['content'] ?></p>
+					</div>
+
+				<?php endforeach; ?>
+
+			</div>
 		</div>
-	</div>
-	<div class="shop__button-container">
-		<button class="shop__button"><a href="#otzyvy">Читать отзывы</a></button>
-	</div>
-</section> -->
+	</section>
+
+<?php endif; ?>
+
+<!-- <section class=" shop" id="shop_now">
+						<div class="shop__row">
+							<div class="shop__part-1">
+								<div class="shop__part-1-top">
+									<div class="overflow-container">
+										<div class="img-container"></div>
+									</div>
+									<div class="overflow-container">
+										<div class="img-container"></div>
+									</div>
+								</div>
+								<div class="shop__part-1-bottom">
+									<div class="overflow-container">
+										<div class="img-container"></div>
+									</div>
+								</div>
+							</div>
+							<div class="shop__part-2">
+								<div class="overflow-container">
+									<div class="overflow-container"></div>
+									<div class="img-container"></div>
+								</div>
+								<div class="overflow-container">
+									<div class="img-container"></div>
+								</div>
+							</div>
+							<div class="shop__part3">
+								<div class="shop__part-3-top"><a href="#shop_now">
+										<div class="overflow-container">
+											<div class="img-container"></div>
+										</div>
+										<div class="shop-now">
+											<img class="shop__ico" src="assets/img/bottom/Shape_13.png" alt="">
+											<div class="shop__title">Shop now</div>
+										</div>
+								</div></a>
+								<div class="shop__part-3-bottom">
+									<div class="overflow-container">
+										<div class="img-container"></div>
+									</div>
+									<div class="overflow-container">
+										<div class="img-container"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="shop__button-container">
+							<button class="shop__button"><a href="#otzyvy">Читать отзывы</a></button>
+						</div>
+	</section> -->
 
 <!-- <section class="email">
 	<a href=""><img src="assets/img/header/header_Logo.png" alt=""></a>

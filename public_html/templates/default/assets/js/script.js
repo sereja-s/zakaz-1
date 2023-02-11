@@ -30,9 +30,10 @@ $(document).ready(function () {
 	const slider = $("#slider").owlCarousel({
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 12000,
-		smartSpeed: 7000,
-		//margin: 10,
+		autoplayTimeout: 20000,
+		smartSpeed: 10000,
+		margin: 50,
+		responsiveBaseWidth: '#otzyvy',
 		//nav: true,
 		responsive: {
 			0: {

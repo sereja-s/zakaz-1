@@ -7,17 +7,20 @@ namespace core\user\controller;
  */
 class IndexController extends BaseUser
 {
-	protected $name;
-
 	protected function inputData()
 	{
 		// Выпуск №120
 		parent::inputData();
 
+		$comments = $this->model->get('comments', [
+
+			'order_direction' => ['DESC'],
+			'limit' => 5
+		]);
+
+		return compact('comments');
 
 			//=============================================================================================================//
-
-
 
 			// Выпуск №128 - массив преимуществ
 			/* 	$advantages = $this->model->get('advantages', [
