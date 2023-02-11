@@ -15,25 +15,25 @@ class IndexController extends BaseUser
 		parent::inputData();
 
 
-		//=============================================================================================================//
+			//=============================================================================================================//
 
 
 
-		// Выпуск №128 - массив преимуществ
-		$advantages = $this->model->get('advantages', [
+			// Выпуск №128 - массив преимуществ
+			/* 	$advantages = $this->model->get('advantages', [
 			'where' => ['visible' => 1],
 			'order' => ['menu_position'],
 			'limit' => 6
-		]);
+		]); */
 
-		// Выпуск №128 | Вывод новостей
-		$news = $this->model->get('news', [
+			// Выпуск №128 | Вывод новостей
+			/* $news = $this->model->get('news', [
 			'where' => ['visible' => 1],
 			'order' => ['date'],
 			'order_direction' => ['DESC'],
 			'limit' => 3
-		]);
+		]) */;
 
-		return compact('advantages', 'news');
+		/* return compact('advantages', 'news'); */
 	}
 }

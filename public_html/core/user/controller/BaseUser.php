@@ -35,6 +35,17 @@ abstract class BaseUser extends \core\base\controller\BaseController
 	 */
 	protected $socials;
 
+	protected $info;
+
+	protected $section1;
+	protected $section2;
+	protected $section3;
+	protected $section4;
+	protected $section5;
+	protected $section6;
+	protected $section7;
+
+
 
 	protected function inputData()
 	{
@@ -55,11 +66,61 @@ abstract class BaseUser extends \core\base\controller\BaseController
 		// который пришёл (первый по очереди, т.е. будет забираться только одна каждая следующая созданная запись)
 		$this->set && $this->set = $this->set[0];
 
+		$this->info = $this->model->get('information', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->info && $this->info = $this->info[0];
+
+		//-------------------------------------------------------------------------------------------------------------//
+
+		$this->section1 = $this->model->get('section1', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section1 && $this->section1 = $this->section1[0];
+
+		$this->section2 = $this->model->get('section2', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section2 && $this->section2 = $this->section2[0];
+
+		$this->section3 = $this->model->get('section3', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section3 && $this->section3 = $this->section3[0];
+
+		$this->section4 = $this->model->get('section4', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section4 && $this->section4 = $this->section4[0];
+
+		$this->section5 = $this->model->get('section5', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section5 && $this->section5 = $this->section5[0];
+
+		$this->section6 = $this->model->get('section6', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section6 && $this->section6 = $this->section6[0];
+
+		$this->section7 = $this->model->get('section7', [
+			'order' => ['id'],
+			'limit' => 1
+		]);
+		$this->section7 && $this->section7 = $this->section7[0];
+
 		// получим в св-во: $this->menu, в ячейку: ['information'], то что хранится в соответствующей таблице БД
-		$this->menu['information'] = $this->model->get('information', [
+		/* $this->menu['information'] = $this->model->get('information', [
 			'where' => ['visible' => 1, 'show_top_menu' => 1],
 			'order' => ['menu_position']
-		]);
+		]); */
 
 		// получим в св-во: $this->socials, то что хранится в соответствующей таблице БД
 		$this->socials = $this->model->get('socials', [

@@ -22,15 +22,27 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header" style='background: url("<?= PATH . TEMPLATE ?>assets/img/header/header_bg.png") center top/cover no-repeat fixed;'>
+		<header class="header" style='background: url("<?= $this->img($this->set['bg_img']) ?>") center top/cover no-repeat fixed;'>
 			<div class="header__nav-wrapper">
 				<nav class="header__nav">
 					<ul id="top-navigation">
-						<li><a class="header__link" href="#stroyka">стройка</a></li>
-						<li><a class="header__link" href="#svarka">сварка</a></li>
+						<li><a class="header__link" href="#<?= $this->section1['section_id'] ?>"><?= $this->section1['name'] ?></a></li>
+						<li><a class="header__link" href="#<?= $this->section2['section_id'] ?>"><?= $this->section2['name'] ?></a></li>
 						<li><a href="<?= $this->alias() ?>"><img class="header__logo" id="header__logo" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></a></li>
-						<li><a class="header__link" href="#santehnika">сантехника</a></li>
-						<li><a class="header__link" href="#elektrika">электрика</a></li>
+						<li><a class="header__link" href="#<?= $this->section3['section_id'] ?>"><?= $this->section3['name'] ?></a></li>
+						<li><a class="header__link" href="#<?= $this->section4['section_id'] ?>"><?= $this->section4['name'] ?></a></li>
+
+						<?php if (!empty($this->section5['name'])) : ?>
+							<li><a class="header__link" href="#<?= $this->section5['section_id'] ?>"><?= $this->section5['name'] ?></a></li>
+						<?php endif; ?>
+
+						<?php if (!empty($this->section6['name'])) : ?>
+							<li><a class="header__link" href="#<?= $this->section6['section_id'] ?>"><?= $this->section6['name'] ?></a></li>
+						<?php endif; ?>
+
+						<?php if (!empty($this->section7['name'])) : ?>
+							<li><a class="header__link" href="#<?= $this->section7['section_id'] ?>"><?= $this->section7['name'] ?></a></li>
+						<?php endif; ?>
 
 						<!-- <li><a class="header__link" href="#contact">Контактная информация</a></li> -->
 					</ul>

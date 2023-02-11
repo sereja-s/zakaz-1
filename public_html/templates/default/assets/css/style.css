@@ -265,6 +265,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -280,8 +281,9 @@ body {
   transition: all 0.5s ease;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px) {	
    .header__nav ul {
+		flex-wrap: nowrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -291,16 +293,18 @@ body {
     height: 100%;
     /* width: 100%; */
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-	 padding-top: 230px;
+    background-color: rgba(0, 0, 0, 0.77);
+	 padding-top: 180px;
+	 font-family:Arial, Helvetica, sans-serif;
   } 
-  .header__nav ul li:nth-child(3) {
+  /* .header__nav ul li:nth-child(3) {
     position: absolute;
     top: 15px;
     right: -15px;
-  }
+  } */
   .header__nav ul li:nth-child(3) a img {
-    max-width: 255px;
+    max-width: 200px;
+	 padding: 10px 0;
     /* height: 48px; */
   }
   .header__nav ul.active {
@@ -323,7 +327,7 @@ body {
   .header__nav li {
     /* height: 8em; */
     /* line-height: 6em; */
-    width: 90%;
+    width: 90%;	 
   }
 }
 
@@ -399,13 +403,16 @@ body {
     display: block;
     height: 100%;
     width: 100%;
-    text-align: center;
-    font-size: 40px;
+    /* text-align: center; */
+    font-size: 30px;
   }
 }
 
 @media (min-width: 751px) {
-  .header__link:before, .header__link:after {
+	.header__link:hover {
+		color: #ffff24;
+	}
+  /* .header__link:before, .header__link:after {
     content: "";
     height: 1px;
     width: 0;
@@ -418,7 +425,7 @@ body {
   .header__link:hover:before, .header__link:hover:after {
     width: calc(100% + 20px);
     opacity: 0.9;
-  }
+  } */
 }
 
 /* =================================================================================================================*/
@@ -426,7 +433,7 @@ body {
 .generation {
   padding-top: 60px;
   padding-bottom: 25px;
-  text-align: center;
+  /* text-align: center; */
   background-color:#ffffff;
 }
 

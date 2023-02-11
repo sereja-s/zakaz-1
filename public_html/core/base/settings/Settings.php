@@ -80,11 +80,16 @@ class Settings
 	// свойство с таблицами, названия которых будут показаны в боковом меню админки
 	private $projectTables = [
 
-		'information' => ['name' => 'Информация'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
-		'advantages' => ['name' => 'Преимущества'],
+		'information' => ['name' => 'Информация'],
+		'section1' => ['name' => 'секция1'],
+		'section2' => ['name' => 'секция2'],
+		'section3' => ['name' => 'секция3'],
+		'section4' => ['name' => 'секция4'],
+		'section5' => ['name' => 'секция5'],
+		'section6' => ['name' => 'секция6'],
+		'section7' => ['name' => 'секция7'],
 		'socials' => ['name' => 'Соц.сети'],
-		'news' => ['name' => 'Новости'],
 		'users' => ['name' => 'Пользователи'],
 	];
 
@@ -92,13 +97,13 @@ class Settings
 	private $templateArr = [
 
 		// массив вида: 'название шаблона' => массив с полями для которых должен быть подключен соответствующий шаблон
-		'text' => ['name', 'phone', 'email', 'alias', 'menu_id', 'external_alias', 'sub_title', 'number_of_years', 'discount', 'price', 'login', 'password'],
+		'text' => ['name', 'phone', 'email', 'alias', 'section_id', 'external_alias', 'sub_title', 'number_of_years', 'discount', 'price', 'login', 'password'],
 		'textarea' => ['content', 'keywords', 'address', 'address_big', 'description', 'short_content'],
 		'radio' => ['visible', 'show_top_menu', 'hit', 'sale', 'new', 'hot'],
 		'checkboxlist' => ['filters', 'filters_test'], // указали, что хотим подключить фильтры к связанной таблице: 
 		// товары (они прописаны в массиве: в свойстве: private $manyToMany)
 		'select' => ['menu_position', 'parent_id'],
-		'img' => ['img', 'main_img', 'img_horizontal', 'img_vertical', 'promo_img'],
+		'img' => ['img', 'main_img', 'img_horizontal', 'img_vertical1', 'img_vertical2', 'bg_img', 'promo_img'],
 		'gallery_img' => ['gallery_img', 'new_gallery_img']
 	];
 
@@ -117,11 +122,13 @@ class Settings
 		'address' => ['Адрес'],
 		'address_big' => ['детали адреса'],
 		'alias' => ['Ссылка ЧПУ'],
-		'menu_id' => ['Идетификатор'],
+		'section_id' => ['Идетификатор'],
 		'external_alias' => ['Внешняя ссылка'],
 		'img' => ['Изображение', '(Одно)'],
 		'img_horizontal' => ['Изображение горизонтальное', '(Одно)'],
-		'img_vertical' => ['Изображение вертикальное', '(Одно)'],
+		'img_vertical1' => ['Изображение вертикальное_1', '(Одно)'],
+		'img_vertical2' => ['Изображение вертикальное_2', '(Одно)'],
+		'bg_img' => ['Изображение-фон', '(Одно)'],
 		'gallery_img' => ['галерея изображений', '(Несколько)'],
 		'visible' => ['Видимость', '(Показывать?)'],
 		'menu_position' => ['Позиция в списке', '(Расположение в меню)'],
@@ -168,7 +175,7 @@ class Settings
 	// (по умолчанию содержимое разделов адмики занимает левый блок: vg-rows) 
 	private $blockNeedle = [
 		'vg-rows' => [],
-		'vg-img' => ['img', 'main_img', 'gallery_img', 'img_horizontal', 'img_vertical', 'promo_img'],
+		'vg-img' => ['img', 'main_img', 'gallery_img', 'img_horizontal', 'bg_img', 'promo_img'],
 		'vg-content' => ['content']
 	];
 

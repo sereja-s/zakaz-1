@@ -13,7 +13,7 @@
 		</div>
 		<div class="footer__yebo">
 			<span>проект Sait_postroen</span>
-			<img src="<?= PATH . TEMPLATE ?>assets/img/bottom/Y_E_B_O_Logo.png" alt="">
+			<!-- <img src="<?= PATH . TEMPLATE ?>assets/img/bottom/Y_E_B_O_Logo.png" alt=""> -->
 		</div>
 	</div>
 </footer>
