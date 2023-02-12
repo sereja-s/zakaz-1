@@ -20,8 +20,6 @@
 							<img src="<?= $this->img($item['img']) ?>" alt="<?= $item['name'] ?>">
 
 						</a></div>
-					<!-- <div class="footer__social facebook-ico" style='background: url("<?= PATH . TEMPLATE ?>assets/img/bottom/facebook.svg") center center/contain no-repeat;'></div>
-			<div class="footer__social pinterest-ico" style='background: url("<?= PATH . TEMPLATE ?>assets/img/bottom/pinterest.svg") center center/contain no-repeat;'></div> -->
 
 				<?php endforeach; ?>
 
@@ -31,7 +29,7 @@
 
 		<div class="footer__yebo">
 			<span>проект Sait_postroen</span>
-			<!-- <img src="<?= PATH . TEMPLATE ?>assets/img/bottom/Y_E_B_O_Logo.png" alt=""> -->
+			<!-- <img src="" alt=""> -->
 		</div>
 	</div>
 </footer>
